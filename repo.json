@@ -1,0 +1,12 @@
+{
+  "name": "Cinepulse Extension",
+  "description": "Extension Cloudstream pour Cinepulse.to",
+  "manifestVersion": 1,
+  "pluginVersion": "1.0",
+  "extensions": [
+    {
+      "name": "Cinemax Cinepulse",
+      "filename": "Cinemax Cinepulse.cs3"
+    }
+  ]
+}
