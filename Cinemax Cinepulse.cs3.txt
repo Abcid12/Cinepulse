@@ -1,0 +1,33 @@
+import com.lagradost.cloudstream3.*
+import com.lagradost.cloudstream3.network.*
+
+class CinepulseTo : MainAPI() {
+    override val name = "Cinepulse.to"
+    override val mainUrl = "https://cinepulse.to"
+    override val lang = "fr"
+    override val hasMainPage = true
+
+    override suspend fun getMainPage(): HomePageResponse {
+        val list = arrayListOf<HomePageList>()
+        list.add(HomePageList("Films populaires", getPopular()))
+        list.add(HomePageList("Derniers ajouts", getLatest()))
+        return HomePageResponse(list)
+    }
+
+    private suspend fun getPopular(): List<Content> {
+        val result = arrayListOf<Content>()
+        // Code pour récupérer les films populaires
+        return result
+    }
+
+    private suspend fun getLatest(): List<Content> {
+        val result = arrayListOf<Content>()
+        // Code pour récupérer les derniers ajouts
+        return result
+    }
+
+    override suspend fun load(url: String): LoadResponse {
+        // Code pour récupérer le lien de la vidéo
+        return LoadResponse(listOf(Video(url, "Qualité", "mp4")))
+    }
+}
